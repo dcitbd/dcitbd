@@ -47,7 +47,7 @@ const DC_CONFIG = {
   // API Base
   // API Base: You can set your Google Apps Script Web App URL here directly,
   // or leave as '/api' if using Cloudflare Worker reverse proxy.
-  API_BASE: "https://script.google.com/macros/s/AKfycbz_SAMPLE_DEPLOYMENT_ID/exec",
+  API_BASE: "https://script.google.com/macros/s/AKfycbzOf60q9avErFaFbgFyq-DMdPoWHlqTU6ow8qZnKsHng9NNI__up3ITuEE3uzmjOun4/exec",
 
 
   // Demo Fallback Data for UI Resilience
