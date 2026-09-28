@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Dream Cart BD Admin</title>
+  <link rel="icon" href="https://tinyurl.com/Dream-Cart-BD" type="image/x-icon">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Custom Admin Styles -->
+  <link rel="stylesheet" href="assets/css/admin.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body class="admin-body">
+
+  <!-- Admin Sidebar -->
+  <aside class="admin-sidebar">
+    <div class="admin-sidebar-header">
+      <div class="d-flex align-items-center gap-2">
+        <div class="navbar-brand-logo" style="width:34px;height:34px;font-size:16px;">DC</div>
+        <div class="fw-bold text-light fs-6">Dream Cart <span class="text-primary">Admin</span></div>
+      </div>
+    </div>
+    
+    <ul class="admin-sidebar-menu">
+      <li class="admin-nav-item">
+        <a href="admin-dashboard.html" class="admin-nav-link active">
+          <i class="bi bi-grid-1x2-fill"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+
+      <li class="menu-category-label">Catalog & Products</li>
+      <li class="admin-nav-item"><a href="admin-products.html" class="admin-nav-link "><i class="bi bi-boxes"></i>All Products</a></li>
+      <li class="admin-nav-item"><a href="admin-product-add.html" class="admin-nav-link "><i class="bi bi-plus-circle"></i>Add Product</a></li>
+      <li class="admin-nav-item"><a href="admin-product-bulk-upload.html" class="admin-nav-link "><i class="bi bi-cloud-arrow-up"></i>Bulk Upload</a></li>
+      <li class="admin-nav-item"><a href="admin-product-bulk-stock.html" class="admin-nav-link "><i class="bi bi-layers-fill"></i>Bulk Stock</a></li>
+      <li class="admin-nav-item"><a href="admin-product-bulk-update.html" class="admin-nav-link "><i class="bi bi-pencil-square"></i>Bulk Update</a></li>
+      <li class="admin-nav-item"><a href="admin-product-export.html" class="admin-nav-link "><i class="bi bi-file-earmark-spreadsheet"></i>Export Products</a></li>
+      <li class="admin-nav-item"><a href="admin-categories.html" class="admin-nav-link "><i class="bi bi-diagram-3"></i>Categories Tree</a></li>
+      <li class="admin-nav-item"><a href="admin-brands.html" class="admin-nav-link "><i class="bi bi-award"></i>Brands</a></li>
+      <li class="admin-nav-item"><a href="admin-attributes.html" class="admin-nav-link "><i class="bi bi-tags"></i>Attributes</a></li>
+
+      <li class="menu-category-label">Orders & Operations</li>
+      <li class="admin-nav-item"><a href="admin-orders.html" class="admin-nav-link "><i class="bi bi-cart-check"></i>All Orders</a></li>
+      <li class="admin-nav-item"><a href="admin-order-create.html" class="admin-nav-link "><i class="bi bi-bag-plus"></i>Create Order & Voucher</a></li>
+      <li class="admin-nav-item"><a href="admin-incomplete-orders.html" class="admin-nav-link "><i class="bi bi-cart-x"></i>Incomplete Orders</a></li>
+      <li class="admin-nav-item"><a href="admin-return-orders.html" class="admin-nav-link "><i class="bi bi-arrow-return-left"></i>Return Orders</a></li>
+      <li class="admin-nav-item"><a href="admin-shipments.html" class="admin-nav-link "><i class="bi bi-truck"></i>Shipments & Couriers</a></li>
+
+      <li class="menu-category-label">User Management</li>
+      <li class="admin-nav-item"><a href="admin-customers.html" class="admin-nav-link "><i class="bi bi-people"></i>Customers</a></li>
+      <li class="admin-nav-item"><a href="admin-sellers.html" class="admin-nav-link "><i class="bi bi-shop"></i>Sellers</a></li>
+      <li class="admin-nav-item"><a href="admin-resellers.html" class="admin-nav-link "><i class="bi bi-graph-up-arrow"></i>Resellers</a></li>
+      <li class="admin-nav-item"><a href="admin-wholesalers.html" class="admin-nav-link "><i class="bi bi-box-seam"></i>Wholesalers</a></li>
+      <li class="admin-nav-item"><a href="admin-workers.html" class="admin-nav-link "><i class="bi bi-person-badge"></i>Workers & Staff</a></li>
+      <li class="admin-nav-item"><a href="admin-roles.html" class="admin-nav-link "><i class="bi bi-shield-check"></i>Roles & Permissions</a></li>
+
+      <li class="menu-category-label">Finance & Accounts</li>
+      <li class="admin-nav-item"><a href="admin-payments.html" class="admin-nav-link "><i class="bi bi-cash-coin"></i>Payments Verification</a></li>
+      <li class="admin-nav-item"><a href="admin-commission.html" class="admin-nav-link "><i class="bi bi-percent"></i>Reseller Commission</a></li>
+      <li class="admin-nav-item"><a href="admin-payouts.html" class="admin-nav-link "><i class="bi bi-wallet2"></i>Payout Requests (3% Fee)</a></li>
+      <li class="admin-nav-item"><a href="admin-buying.html" class="admin-nav-link "><i class="bi bi-cart-plus"></i>Buying / Procurement</a></li>
+      <li class="admin-nav-item"><a href="admin-invest.html" class="admin-nav-link "><i class="bi bi-piggy-bank"></i>Investments</a></li>
+      <li class="admin-nav-item"><a href="admin-costs.html" class="admin-nav-link "><i class="bi bi-receipt"></i>Operational Costs</a></li>
+
+      <li class="menu-category-label">Marketing & CMS</li>
+      <li class="admin-nav-item"><a href="admin-banners.html" class="admin-nav-link "><i class="bi bi-image"></i>Banners & Sliders</a></li>
+      <li class="admin-nav-item"><a href="admin-offers.html" class="admin-nav-link "><i class="bi bi-gift"></i>Offers & Flash Sales</a></li>
+      <li class="admin-nav-item"><a href="admin-landing-pages.html" class="admin-nav-link "><i class="bi bi-layout-text-window-reverse"></i>Landing Pages</a></li>
+      <li class="admin-nav-item"><a href="admin-reviews.html" class="admin-nav-link "><i class="bi bi-star"></i>Reviews</a></li>
+      <li class="admin-nav-item"><a href="admin-markets.html" class="admin-nav-link "><i class="bi bi-globe"></i>Market Links</a></li>
+
+      <li class="menu-category-label">System & Reports</li>
+      <li class="admin-nav-item"><a href="admin-reports.html" class="admin-nav-link "><i class="bi bi-bar-chart-line"></i>Reports & Analytics</a></li>
+      <li class="admin-nav-item"><a href="admin-visitors.html" class="admin-nav-link "><i class="bi bi-eye"></i>Live Visitors</a></li>
+      <li class="admin-nav-item"><a href="admin-notifications.html" class="admin-nav-link "><i class="bi bi-bell"></i>Notifications</a></li>
+      <li class="admin-nav-item"><a href="admin-settings.html" class="admin-nav-link "><i class="bi bi-gear"></i>Site Settings</a></li>
+      <li class="admin-nav-item"><a href="admin-audit-log.html" class="admin-nav-link "><i class="bi bi-journal-text"></i>Audit Logs</a></li>
+    </ul>
+  </aside>
+
+  <div class="admin-wrapper">
+    
+  <!-- Admin Topbar -->
+  <header class="admin-topbar">
+    <div class="d-flex align-items-center gap-3">
+      <button class="btn btn-outline-secondary btn-sm d-lg-none" id="adminSidebarToggle">
+        <i class="bi bi-list fs-5"></i>
+      </button>
+      <div class="fw-semibold text-light fs-5">Executive Dashboard</div>
+    </div>
+
+    <div class="d-flex align-items-center gap-3">
+      <button class="btn btn-outline-secondary btn-sm rounded-circle" id="adminThemeToggle" title="Toggle Theme">
+        <i class="bi bi-moon-stars-fill"></i>
+      </button>
+
+      <a href="admin-notifications.html" class="position-relative text-light text-decoration-none">
+        <i class="bi bi-bell fs-5"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:10px;">5</span>
+      </a>
+
+      <div class="dropdown">
+        <button class="btn btn-sm btn-outline-secondary dropdown-toggle d-flex align-items-center gap-2 rounded-pill px-3" data-bs-toggle="dropdown">
+          <div class="navbar-brand-logo" style="width:24px;height:24px;font-size:11px;">JA</div>
+          <span class="small fw-semibold text-light">Jainal Abedin</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow-lg border-secondary bg-card">
+          <li><h6 class="dropdown-header text-muted">Super Admin</h6></li>
+          <li><a class="dropdown-item" href="admin-settings.html"><i class="bi bi-gear me-2"></i>Settings</a></li>
+          <li><a class="dropdown-item" href="index.html" target="_blank"><i class="bi bi-shop me-2"></i>View Shop</a></li>
+          <li><hr class="dropdown-divider border-secondary"></li>
+          <li><a class="dropdown-item text-danger" href="javascript:void(0)" onclick="api.logout(); window.location.href='admin-login.html';"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+    <main class="admin-content">
+      <!-- Quick Action Buttons -->
+      <div class="d-flex gap-2 flex-wrap mb-4">
+        <a href="admin-product-add.html" class="btn btn-primary btn-sm rounded-pill"><i class="bi bi-plus-circle me-1"></i>Add Product</a>
+        <a href="admin-order-create.html" class="btn btn-success btn-sm rounded-pill"><i class="bi bi-bag-plus me-1"></i>Create Order</a>
+        <a href="admin-buying.html" class="btn btn-info btn-sm rounded-pill text-dark"><i class="bi bi-cart-plus me-1"></i>Add Buying</a>
+        <a href="admin-costs.html" class="btn btn-warning btn-sm rounded-pill text-dark"><i class="bi bi-receipt me-1"></i>Add Cost</a>
+        <a href="admin-invest.html" class="btn btn-purple btn-sm rounded-pill text-light" style="background:#8b5cf6;"><i class="bi bi-piggy-bank me-1"></i>Add Invest</a>
+        <a href="admin-payouts.html" class="btn btn-outline-danger btn-sm rounded-pill"><i class="bi bi-wallet2 me-1"></i>Check Payouts</a>
+      </div>
+
+      <!-- Stat Counters Grid -->
+      <div class="row g-3 mb-4">
+        <div class="col-6 col-md-4 col-xl-2">
+          <div class="stat-card">
+            <div class="stat-icon-wrap bg-primary"><i class="bi bi-boxes"></i></div>
+            <div>
+              <div class="stat-val">1,250</div>
+              <div class="stat-title">Total Products</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-xl-2">
+          <div class="stat-card">
+            <div class="stat-icon-wrap bg-success"><i class="bi bi-check-circle"></i></div>
+            <div>
+              <div class="stat-val">1,100</div>
+              <div class="stat-title">In Stock</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-xl-2">
+          <div class="stat-card">
+            <div class="stat-icon-wrap bg-danger"><i class="bi bi-x-circle"></i></div>
+            <div>
+              <div class="stat-val">100</div>
+              <div class="stat-title">Out of Stock</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-xl-2">
+          <div class="stat-card">
+            <div class="stat-icon-wrap bg-warning"><i class="bi bi-exclamation-triangle"></i></div>
+            <div>
+              <div class="stat-val">50</div>
+              <div class="stat-title">Low Stock Alert</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-xl-2">
+          <div class="stat-card">
+            <div class="stat-icon-wrap bg-info text-dark"><i class="bi bi-cart-check"></i></div>
+            <div>
+              <div class="stat-val">342</div>
+              <div class="stat-title">Total Orders</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-xl-2">
+          <div class="stat-card">
+            <div class="stat-icon-wrap bg-secondary"><i class="bi bi-cash-stack"></i></div>
+            <div>
+              <div class="stat-val">৳ 4,85K</div>
+              <div class="stat-title">Gross Revenue</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Charts Section -->
+      <div class="row g-4 mb-4">
+        <div class="col-lg-8">
+          <div class="card bg-card border-secondary p-4 rounded-4 shadow-sm h-100">
+            <h6 class="fw-bold mb-3"><i class="bi bi-graph-up me-2 text-primary"></i>Monthly Sales & Revenue Overview (2026)</h6>
+            <canvas id="salesChart" height="110"></canvas>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card bg-card border-secondary p-4 rounded-4 shadow-sm h-100">
+            <h6 class="fw-bold mb-3"><i class="bi bi-pie-chart me-2 text-warning"></i>Order Status Breakdown</h6>
+            <canvas id="orderPieChart" height="220"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Orders Table -->
+      <div class="admin-card-table p-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h6 class="fw-bold mb-0">Recent Orders</h6>
+          <a href="admin-orders.html" class="btn btn-outline-primary btn-sm rounded-pill">View All Orders</a>
+        </div>
+        <div class="table-responsive">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Date</th>
+                <th>Buyer Type</th>
+                <th>Customer</th>
+                <th>Amount</th>
+                <th>Payment</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-primary fw-bold">DC-984210</td>
+                <td>Sep 28, 2026</td>
+                <td><span class="role-badge reseller">Reseller</span></td>
+                <td>Rahim Uddin (01819283746)</td>
+                <td>৳ 1,850</td>
+                <td><span class="badge bg-success">Verified</span></td>
+                <td><span class="badge bg-info text-dark">Processing</span></td>
+                <td><a href="admin-order-details.html?id=DC-984210" class="btn btn-sm btn-outline-primary py-0 px-2">Details</a></td>
+              </tr>
+              <tr>
+                <td class="text-primary fw-bold">DC-984209</td>
+                <td>Sep 28, 2026</td>
+                <td><span class="role-badge customer">Customer</span></td>
+                <td>Farhana Akter (01712938475)</td>
+                <td>৳ 2,450</td>
+                <td><span class="badge bg-warning text-dark">Pending</span></td>
+                <td><span class="badge bg-primary">Pending</span></td>
+                <td><a href="admin-order-details.html?id=DC-984209" class="btn btn-sm btn-outline-primary py-0 px-2">Details</a></td>
+              </tr>
+              <tr>
+                <td class="text-primary fw-bold">DC-984208</td>
+                <td>Sep 27, 2026</td>
+                <td><span class="role-badge wholesaler">Wholesaler</span></td>
+                <td>Bhuiyan Office Supplies (01918273645)</td>
+                <td>৳ 14,200</td>
+                <td><span class="badge bg-success">Verified</span></td>
+                <td><span class="badge bg-success">Delivered</span></td>
+                <td><a href="admin-order-details.html?id=DC-984208" class="btn btn-sm btn-outline-primary py-0 px-2">Details</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/admin.js"></script>
+  
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Sales Line Chart
+  const ctx = document.getElementById('salesChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+      datasets: [
+        { label: 'Gross Sales (৳)', data: [120000, 145000, 180000, 160000, 210000, 250000, 290000, 340000, 485000], borderColor: '#0ea5e9', backgroundColor: 'rgba(14,165,233,0.1)', fill: true, tension: 0.3 },
+        { label: 'Buying Cost (৳)', data: [80000, 95000, 115000, 105000, 140000, 160000, 185000, 220000, 310000], borderColor: '#f59e0b', tension: 0.3 }
+      ]
+    },
+    options: { responsive: true, plugins: { legend: { labels: { color: '#94a3b8' } } }, scales: { x: { ticks: { color: '#94a3b8' } }, y: { ticks: { color: '#94a3b8' } } } }
+  });
+
+  // Order Status Pie Chart
+  const pieCtx = document.getElementById('orderPieChart').getContext('2d');
+  new Chart(pieCtx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Delivered', 'Processing', 'Pending', 'Cancelled', 'Returned'],
+      datasets: [{
+        data: [230, 45, 38, 17, 12],
+        backgroundColor: ['#10b981', '#0ea5e9', '#f59e0b', '#ef4444', '#8b5cf6']
+      }]
+    },
+    options: { responsive: true, plugins: { legend: { position: 'bottom', labels: { color: '#94a3b8' } } } }
+  });
+});
+</script>
+
+</body>
+</html>
