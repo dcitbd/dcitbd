@@ -61,10 +61,27 @@ class DreamCartAPI {
     }
   }
 
-  // Generic Request Helper
+  // Generic Request Helper (Supports both relative /api and direct Google Apps Script URL)
   async request(endpoint, options = {}) {
-    options.headers = { ...this.getHeaders(), ...(options.headers || {}) };
-    const url = `${this.baseUrl}${endpoint.startsWith('/') ? endpoint : '/' + endpoint}`;
+    const user = this.getCurrentUser();
+    const token = user ? user.token : "";
+    options.headers = {
+      "Content-Type": "application/json",
+      ...(token ? { "Authorization": `Bearer ${token}` } : {}),
+      ...(options.headers || {})
+    };
+
+    let url;
+    if (this.baseUrl.startsWith("http")) {
+      const cleanEndpoint = endpoint.replace(/^\//, '').split('?')[0];
+      const separator = this.baseUrl.includes('?') ? '&' : '?';
+      url = `${this.baseUrl}${separator}action=${cleanEndpoint}`;
+      if (endpoint.includes('?')) {
+        url += '&' + endpoint.split('?')[1];
+      }
+    } else {
+      url = `${this.baseUrl}${endpoint.startsWith('/') ? endpoint : '/' + endpoint}`;
+    }
     
     try {
       const response = await fetch(url, options);
@@ -73,9 +90,10 @@ class DreamCartAPI {
       }
       return await response.json();
     } catch (err) {
-      console.warn(`[DreamCartAPI] Live backend call failed to ${url}, fallback active:`, err.message);
+      console.warn(`[DreamCartAPI] Backend call to ${url} notice:`, err.message);
       return this.handleFallback(endpoint, options);
     }
+  }
   }
 
   // Resilient Local Fallback Engine
