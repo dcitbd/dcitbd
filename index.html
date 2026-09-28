@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="bn" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>হোম | Dream Cart BD - You Make.</title>
+  <meta name="description" content="ড্রিম কার্ট বিডি - প্রিমিয়াম ই-কমার্স প্ল্যাটফর্ম। অফিস ইকুইপমেন্ট, গ্যাজেটস ও জেনারেল প্রডাক্টস।">
+  <link rel="icon" href="https://tinyurl.com/Dream-Cart-BD" type="image/x-icon">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Google Fonts Hind Siliguri -->
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Swiper.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div id="global-loader">
+    <div class="loader-logo">DC</div>
+    <div class="loader-progress"></div>
+    <div class="text-muted small mt-3">লোড হচ্ছে... ড্রিম কার্ট বিডি</div>
+  </div>
+
+  <!-- Top Announcement -->
+  <div class="top-announcement">
+    <span><i class="bi bi-gift-fill me-2"></i>২০০০ টাকার বেশি অর্ডারে ফ্রি ডেলিভারি! বিকাশ/নগদে ৫% তাৎক্ষণিক ক্যাশব্যাক ছাড়। হটলাইন: 01581703822</span>
+  </div>
+
+  <!-- Main Navigation -->
+  <header class="app-header">
+    <div class="container-homepage">
+      <nav class="navbar navbar-expand-lg py-2">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <div class="navbar-brand-logo">DC</div>
+          <div class="navbar-brand-text">Dream Cart <span>BD</span></div>
+        </a>
+
+        <div class="header-search-wrap mx-lg-4 my-2 my-lg-0 order-3 order-lg-2">
+          <input type="text" class="header-search-input" placeholder="পণ্য, ক্যাটাগরি বা ব্র্যান্ড খুঁজুন...">
+          <button class="header-search-btn" title="অনুসন্ধান"><i class="bi bi-search"></i></button>
+        </div>
+
+        <div class="d-flex align-items-center order-2 order-lg-3 ms-auto gap-2">
+          <button class="btn btn-outline-secondary btn-sm theme-toggle-btn rounded-circle p-2" title="থিম পরিবর্তন">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+          
+          <a href="cart.html" class="btn btn-outline-primary btn-sm position-relative d-flex align-items-center gap-1 rounded-pill px-3">
+            <i class="bi bi-cart3"></i>
+            <span class="d-none d-md-inline">কার্ট</span>
+            <span class="cart-count-badge badge bg-danger rounded-pill" style="display:none;">0</span>
+          </a>
+
+          <div class="dropdown">
+            <button class="btn btn-primary btn-sm dropdown-toggle rounded-pill px-3" data-bs-toggle="dropdown">
+              <i class="bi bi-person-circle me-1"></i>লগইন / পোর্টাল
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-lg border-secondary bg-card">
+              <li><h6 class="dropdown-header text-muted">লগইন করুন</h6></li>
+              <li><a class="dropdown-item" href="customer-login.html"><i class="bi bi-person me-2 text-info"></i>কাস্টমার লগইন</a></li>
+              <li><a class="dropdown-item" href="seller-login.html"><i class="bi bi-shop me-2 text-warning"></i>সেলার পোর্টাল</a></li>
+              <li><a class="dropdown-item" href="reseller-login.html"><i class="bi bi-graph-up-arrow me-2 text-success"></i>রিসেলার পোর্টাল</a></li>
+              <li><a class="dropdown-item" href="wholesaler-login.html"><i class="bi bi-boxes me-2 text-primary"></i>পাইকারি (হোলসেল)</a></li>
+              <li><hr class="dropdown-divider border-secondary"></li>
+              <li><a class="dropdown-item" href="admin-login.html"><i class="bi bi-shield-lock me-2 text-danger"></i>এডমিন প্যানেল</a></li>
+            </ul>
+          </div>
+
+          <button class="navbar-toggler border-secondary ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse order-4 order-lg-2" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="index.html">হোম</a></li>
+            <li class="nav-item"><a class="nav-link" href="products.html">সকল পণ্য</a></li>
+            <li class="nav-item"><a class="nav-link" href="categories.html">ক্যাটাগরি</a></li>
+            <li class="nav-item"><a class="nav-link" href="offers.html">অফারসমূহ</a></li>
+            <li class="nav-item"><a class="nav-link" href="markets.html">অন্যান্য মার্কেট</a></li>
+            <li class="nav-item"><a class="nav-link" href="tracking.html">ট্র্যাকিং</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">যোগাযোগ</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-grow-1">
+    <div class="container-homepage mt-3">
+      
+      <!-- Hero Slider Section -->
+      <section class="hero-slider-wrap mb-4">
+        <div class="swiper heroSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="hero-slide-item" style="background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=1600&auto=format&fit=crop&q=80');">
+                <div class="hero-overlay"></div>
+                <div class="hero-slide-content text-white">
+                  <span class="badge bg-primary px-3 py-2 rounded-pill mb-2">অফিস ইকুইপমেন্ট ২০২৬</span>
+                  <h1 class="display-6 fw-bold mb-3">স্মার্ট অফিসের আধুনিক ও সেরা প্রয়োজনীয় সামগ্রী</h1>
+                  <p class="lead small mb-4">অফিস ফাইল হোল্ডার, পেপার কাটার এবং প্রিমিয়াম এক্সেসরিজ এখন পাইকারি ও খুচরা মূল্যে সারা বাংলাদেশে ক্যাশ অন ডেলিভারিতে।</p>
+                  <div class="d-flex gap-2">
+                    <a href="products.html" class="btn btn-primary rounded-pill px-4">শপ করুন</a>
+                    <a href="offers.html" class="btn btn-outline-light rounded-pill px-4">অফারসমূহ</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="hero-slide-item" style="background-image: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1600&auto=format&fit=crop&q=80');">
+                <div class="hero-overlay"></div>
+                <div class="hero-slide-content text-white">
+                  <span class="badge bg-warning text-dark px-3 py-2 rounded-pill mb-2">স্মার্ট গ্যাজেট ও ইলেকট্রনিক্স</span>
+                  <h1 class="display-6 fw-bold mb-3">লেটেস্ট টেকনোলজি ও লাইফস্টাইল পণ্য</h1>
+                  <p class="lead small mb-4">অরিজিনাল স্মার্টওয়াচ, মিনি ব্লুটুথ স্পিকার এবং রিচার্জেবল হাই-পাওয়ার টর্চলাইট সরাসরি ইমপোর্টার রেটে।</p>
+                  <div class="d-flex gap-2">
+                    <a href="products.html?category=CAT02" class="btn btn-primary rounded-pill px-4">কালেকশন দেখুন</a>
+                    <a href="reseller-register.html" class="btn btn-success rounded-pill px-4">রিসেলিং শুরু করুন</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <!-- Category Shortcut Icons -->
+      <section class="mb-4">
+        <div class="row g-3" id="categoryShortcutsRow">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </section>
+
+      <!-- Dynamic Category Sections: Each Category in an Isolated Section with a 12-Product Slider -->
+      <div id="homeCategorySectionsContainer">
+        <!-- Rendered dynamically by script: 12 products per category, Swiper (Desktop 6, Tab 3-4, Mobile 2) -->
+      </div>
+
+      <!-- Feature Banners / Reseller & Wholesaler Spotlight -->
+      <section class="my-5">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card bg-card border-secondary h-100 p-4 rounded-4 shadow-sm">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="stat-icon-wrap bg-success text-white fs-3">
+                  <i class="bi bi-graph-up-arrow"></i>
+                </div>
+                <div>
+                  <h4 class="fw-bold mb-1">রিসেলার প্ল্যাটফর্ম</h4>
+                  <p class="text-muted small mb-0">বিনা ইনভেস্টমেন্টে লাভ করুন নিশ্চিত কমিশন</p>
+                </div>
+              </div>
+              <p class="text-secondary small">
+                ড্রিম কার্ট বিডি-তে রিসেলার হিসেবে জয়েন করে আমাদের প্রোডাক্ট আপনার কাস্টমারদের কাছে যেকোনো মূল্যে বিক্রি করুন। ডেলিভারি সম্পন্ন হলে আপনার ব্যাংক বা বিকাশে উইথড্র করুন।
+              </p>
+              <div class="mt-auto">
+                <a href="reseller-register.html" class="btn btn-success rounded-pill px-4">রিসেলার একাউন্ট খুলুন</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-card border-secondary h-100 p-4 rounded-4 shadow-sm">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="stat-icon-wrap bg-warning text-white fs-3">
+                  <i class="bi bi-boxes"></i>
+                </div>
+                <div>
+                  <h4 class="fw-bold mb-1">হোলসেলার / পাইকারি কর্নার</h4>
+                  <p class="text-muted small mb-0">দোকানি ও ব্যবসায়ীদের জন্য স্পেশাল হোলসেল রেট</p>
+                </div>
+              </div>
+              <p class="text-secondary small">
+                আপনার শপ বা প্রতিষ্ঠানের জন্য সরাসরি ইমপোর্ট ও ম্যানুফ্যাকচারিং মূল্যে বাল্ক অর্ডার করুন। মিনিমাম অর্ডার কোয়ান্টিটি (MOQ) পূরণে আকর্ষণীয় হোলসেল ডিসকাউন্ট প্রযোজ্য।
+              </p>
+              <div class="mt-auto">
+                <a href="wholesaler-register.html" class="btn btn-warning rounded-pill px-4">হোলসেলার জয়েন করুন</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us -->
+      <section class="py-4 my-4 border-top border-bottom border-secondary">
+        <div class="row g-4 text-center">
+          <div class="col-6 col-md-3">
+            <i class="bi bi-truck text-primary display-6 mb-2"></i>
+            <h6 class="fw-bold">দ্রুত ডেলিভারি</h6>
+            <small class="text-muted">কুমিল্লা, ঢাকা ও সমগ্র বাংলাদেশে দ্রুত পৌঁছানো</small>
+          </div>
+          <div class="col-6 col-md-3">
+            <i class="bi bi-shield-check text-success display-6 mb-2"></i>
+            <h6 class="fw-bold">১০০% অথেনটিক</h6>
+            <small class="text-muted">সরাসরি ইম্পোর্টেড ও পরীক্ষিত কোয়ালিটি</small>
+          </div>
+          <div class="col-6 col-md-3">
+            <i class="bi bi-percent text-warning display-6 mb-2"></i>
+            <h6 class="fw-bold">অনলাইন পেমেন্ট ছাড়</h6>
+            <small class="text-muted">বিকাশ/নগদ/রকেটে ৫% নিশ্চিত ক্যাশব্যাক ছাড়</small>
+          </div>
+          <div class="col-6 col-md-3">
+            <i class="bi bi-headset text-info display-6 mb-2"></i>
+            <h6 class="fw-bold">২৪/৭ কাস্টমার সাপোর্ট</h6>
+            <small class="text-muted">হটলাইন ও হোয়াটসঅ্যাপে তাৎক্ষণিক সাহায্য</small>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Floating Actions (Right Side Desktop & Mobile) -->
+  <div class="floating-actions-desktop">
+    <a href="cart.html" class="floating-btn floating-btn-cart" title="আপনার কার্ট">
+      <i class="bi bi-cart3"></i>
+      <span class="floating-cart-badge cart-count-badge" style="display:none;">0</span>
+    </a>
+    <a href="https://wa.me/8801581703822" target="_blank" class="floating-btn floating-btn-whatsapp" title="হোয়াটসঅ্যাপে যোগাযোগ">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+    <a href="#" class="floating-btn floating-btn-call btn-open-call-modal" title="সরাসরি কল করুন">
+      <i class="bi bi-telephone-fill"></i>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <div class="container-homepage">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-logo">
+            <div class="navbar-brand-logo">DC</div>
+            <div>
+              <h5 class="fw-bold mb-0 text-primary">Dream Cart BD</h5>
+              <small class="text-muted">You Make.</small>
+            </div>
+          </div>
+          <p class="text-secondary small mb-3">
+            ড্রিম কার্ট বিডি একটি আধুনিক ও বিশ্বস্ত ই-কমার্স প্ল্যাটফর্ম। অফিস ইকুইপমেন্ট, ডিজিটাল গ্যাজেটস, ইলেকট্রনিক্স এবং জেনারেল কনজিউমার পণ্যের পাইকারি, রিটেইল ও রিসেলিং সমাধান।
+          </p>
+          <div class="text-secondary small">
+            <p class="mb-1"><i class="bi bi-geo-alt-fill text-danger me-2"></i>চৌধুরী প্লাজা, নিচতলা, রুম নং-০৩, পদুয়ার বাজার বিশ্বরোড, সদর দক্ষিণ, কুমিল্লা, বাংলাদেশ।</p>
+            <p class="mb-1"><i class="bi bi-telephone-fill text-success me-2"></i>01581703822, 01818273838</p>
+            <p class="mb-1"><i class="bi bi-envelope-fill text-info me-2"></i>jainal.dcitbd@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-6">
+          <h6 class="footer-title">কুইক লিংকস</h6>
+          <ul class="footer-links">
+            <li><a href="index.html">হোমপেজ</a></li>
+            <li><a href="products.html">সকল প্রোডাক্ট</a></li>
+            <li><a href="categories.html">ক্যাটাগরি সমূহ</a></li>
+            <li><a href="offers.html">স্পেশাল অফার</a></li>
+            <li><a href="tracking.html">অর্ডার ট্র্যাকিং</a></li>
+            <li><a href="markets.html">অন্যান্য মার্কেট</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-6">
+          <h6 class="footer-title">পলিসি ও শর্ত</h6>
+          <ul class="footer-links">
+            <li><a href="terms.html">ব্যবহারের শর্তাবলী</a></li>
+            <li><a href="privacy.html">প্রাইভেসি পলিসি</a></li>
+            <li><a href="terms.html#returns">রিটার্ন ও রিফান্ড</a></li>
+            <li><a href="terms.html#delivery">ডেলিভারি তথ্য</a></li>
+            <li><a href="contact.html">সাপোর্ট সেন্টার</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h6 class="footer-title">উদ্যোক্তা ও রিসেলার হাব</h6>
+          <p class="text-secondary small">
+            বিনা পুঁজিতে আমাদের সাথে ঘরে বসে প্রোডাক্ট রিসেলিং শুরু করুন এবং প্রতি অর্ডারে আকর্ষণীয় কমিশন আয় করুন।
+          </p>
+          <div class="d-flex gap-2 flex-wrap mb-3">
+            <a href="reseller-register.html" class="btn btn-sm btn-outline-success rounded-pill px-3">রিসেলার হোন</a>
+            <a href="wholesaler-register.html" class="btn btn-sm btn-outline-warning rounded-pill px-3">পাইকারি ক্রয়</a>
+            <a href="seller-register.html" class="btn btn-sm btn-outline-info rounded-pill px-3">সেলার রেজিস্ট্রেশন</a>
+          </div>
+
+          <!-- Developer Credits -->
+          <div class="developer-credit-box">
+            <div class="d-flex align-items-center gap-2 mb-1">
+              <i class="bi bi-code-slash text-primary fs-5"></i>
+              <strong class="small text-white">কারিগরি সহযোগিতায়: জৈনল আবেদীন</strong>
+            </div>
+            <div class="small text-muted mb-2">সিইও, ড্রিম ক্যারিয়ার আইটি বিডি (Dream Career IT BD)</div>
+            <div class="d-flex gap-2">
+              <a href="https://dcitbd.github.io/Jainal-Abedin/" target="_blank" class="badge bg-secondary text-decoration-none">ডেভেলপার প্রোফাইল</a>
+              <a href="https://dcitbd.github.io/dcitbd/" target="_blank" class="badge bg-primary text-decoration-none">কোম্পানি ওয়েবসাইট</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-secondary my-4">
+
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-muted">
+        <div>&copy; 2026 Dream Cart BD. সর্বস্বত্ব সংরক্ষিত। Slogan: "You Make."</div>
+        <div class="mt-2 mt-md-0">
+          <span class="me-3">নিরাপদ পেমেন্ট: বিকাশ | নগদ | রকেট | ব্যাংক</span>
+          <a href="admin-login.html" class="text-muted text-decoration-none"><i class="bi bi-lock-fill"></i> এডমিন</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/app.js"></script>
+  
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  new Swiper(".heroSwiper", {
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: ".swiper-pagination", clickable: true }
+  });
+
+  renderCategoryShortcuts();
+  renderCategorySections();
+});
+
+function renderCategoryShortcuts() {
+  const container = document.getElementById("categoryShortcutsRow");
+  if (!container) return;
+  const cats = DC_CONFIG.SAMPLE_CATEGORIES;
+  container.innerHTML = cats.map(c => `
+    <div class="col-4 col-md-2 text-center">
+      <a href="products.html?category=${c.id}" class="text-decoration-none">
+        <div class="p-3 bg-card border border-secondary rounded-4 shadow-sm hover-up">
+          <i class="bi ${c.icon} text-primary fs-3"></i>
+          <div class="small fw-bold text-primary mt-2 text-truncate">${c.name}</div>
+        </div>
+      </a>
+    </div>
+  `).join("");
+}
+
+function renderCategorySections() {
+  const container = document.getElementById("homeCategorySectionsContainer");
+  if (!container) return;
+  const cats = DC_CONFIG.SAMPLE_CATEGORIES;
+  const products = DC_CONFIG.SAMPLE_PRODUCTS;
+
+  let html = "";
+  cats.forEach(c => {
+    // Only in-stock products, max 12 items for category slider
+    const catProducts = products.filter(p => p.category_id === c.id && p.stock > 0).slice(0, 12);
+    if (catProducts.length === 0) return;
+
+    const swiperId = `swiper_${c.id}`;
+    html += `
+      <section class="category-section">
+        <div class="category-section-header">
+          <div class="category-section-title">
+            <i class="bi ${c.icon}"></i>
+            <span>${c.name}</span>
+          </div>
+          <a href="products.html?category=${c.id}" class="btn-see-all">
+            <span>সব দেখুন</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+        <div class="swiper ${swiperId} pb-4">
+          <div class="swiper-wrapper">
+            ${catProducts.map(p => `
+              <div class="swiper-slide">
+                ${renderProductCard(p)}
+              </div>
+            `).join("")}
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+    `;
+  });
+
+  container.innerHTML = html;
+
+  // Initialize Swiper for each category slider (Desktop 6, Tab 3-4, Mobile 2)
+  cats.forEach(c => {
+    new Swiper(`.swiper_${c.id}`, {
+      slidesPerView: 2,
+      spaceBetween: 12,
+      pagination: { el: `.swiper_${c.id} .swiper-pagination`, clickable: true },
+      breakpoints: {
+        576: { slidesPerView: 3, spaceBetween: 14 },
+        768: { slidesPerView: 4, spaceBetween: 16 },
+        1200: { slidesPerView: 6, spaceBetween: 16 }
+      }
+    });
+  });
+}
+
+function renderProductCard(p) {
+  const user = api.getCurrentUser();
+  const price = api.getProductPriceForUser(p, user);
+  const isFav = api.isFavorite(p.id);
+
+  return `
+    <div class="product-card">
+      <div class="product-card-badge badge-discount">ছাড়</div>
+      <button class="btn-wishlist-toggle ${isFav ? 'active' : ''}" onclick="toggleFav('${p.id}', this)" title="উইশলিস্ট">
+        <i class="bi ${isFav ? 'bi-heart-fill' : 'bi-heart'}"></i>
+      </button>
+      <a href="product-details.html?id=${p.id}" class="product-image-wrap">
+        <img src="${p.image}" alt="${p.name}" loading="lazy">
+      </a>
+      <div class="product-card-body">
+        <div class="product-category-name">${p.category_name}</div>
+        <a href="product-details.html?id=${p.id}" class="product-title" title="${p.name}">${p.name}</a>
+        <div class="product-price-row">
+          <span class="current-price">৳${price}</span>
+          ${p.original_price ? `<span class="original-price">৳${p.original_price}</span>` : ''}
+        </div>
+        <div class="product-action-grid">
+          <button class="btn-card-action btn-card-cart" onclick="quickAddCart('${p.id}')">
+            <i class="bi bi-cart-plus"></i> কার্ট
+          </button>
+          <a href="checkout.html?buyNow=${p.id}" class="btn-card-action btn-card-order">
+            অর্ডার
+          </a>
+          <button class="btn-card-action btn-card-whatsapp" onclick="quickWhatsAppOrder('${p.id}')">
+            <i class="bi bi-whatsapp"></i> হোয়াটসঅ্যাপ
+          </button>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function quickAddCart(productId) {
+  const product = DC_CONFIG.SAMPLE_PRODUCTS.find(p => p.id === productId);
+  if (product) {
+    api.addToCart(product, 1);
+    showToast(`"${product.name}" কার্টে যোগ করা হয়েছে!`, "success");
+  }
+}
+
+function quickWhatsAppOrder(productId) {
+  const product = DC_CONFIG.SAMPLE_PRODUCTS.find(p => p.id === productId);
+  if (product) {
+    sendWhatsAppOrder(product, 1);
+  }
+}
+
+function toggleFav(productId, btn) {
+  const added = api.toggleFavorite(productId);
+  const icon = btn.querySelector("i");
+  if (added) {
+    btn.classList.add("active");
+    icon.className = "bi bi-heart-fill";
+    showToast("ফেভারিটে যোগ করা হয়েছে", "success");
+  } else {
+    btn.classList.remove("active");
+    icon.className = "bi bi-heart";
+    showToast("ফেভারিট থেকে সরানো হয়েছে", "info");
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Details | Dream Cart BD Admin</title>
+  <link rel="icon" href="https://tinyurl.com/Dream-Cart-BD" type="image/x-icon">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Custom Admin Styles -->
+  <link rel="stylesheet" href="assets/css/admin.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body class="admin-body">
+
+  <!-- Admin Sidebar -->
+  <aside class="admin-sidebar">
+    <div class="admin-sidebar-header">
+      <div class="d-flex align-items-center gap-2">
+        <div class="navbar-brand-logo" style="width:34px;height:34px;font-size:16px;">DC</div>
+        <div class="fw-bold text-light fs-6">Dream Cart <span class="text-primary">Admin</span></div>
+      </div>
+    </div>
+    
+    <ul class="admin-sidebar-menu">
+      <li class="admin-nav-item">
+        <a href="admin-dashboard.html" class="admin-nav-link ">
+          <i class="bi bi-grid-1x2-fill"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+
+      <li class="menu-category-label">Catalog & Products</li>
+      <li class="admin-nav-item"><a href="admin-products.html" class="admin-nav-link "><i class="bi bi-boxes"></i>All Products</a></li>
+      <li class="admin-nav-item"><a href="admin-product-add.html" class="admin-nav-link "><i class="bi bi-plus-circle"></i>Add Product</a></li>
+      <li class="admin-nav-item"><a href="admin-product-bulk-upload.html" class="admin-nav-link "><i class="bi bi-cloud-arrow-up"></i>Bulk Upload</a></li>
+      <li class="admin-nav-item"><a href="admin-product-bulk-stock.html" class="admin-nav-link "><i class="bi bi-layers-fill"></i>Bulk Stock</a></li>
+      <li class="admin-nav-item"><a href="admin-product-bulk-update.html" class="admin-nav-link "><i class="bi bi-pencil-square"></i>Bulk Update</a></li>
+      <li class="admin-nav-item"><a href="admin-product-export.html" class="admin-nav-link "><i class="bi bi-file-earmark-spreadsheet"></i>Export Products</a></li>
+      <li class="admin-nav-item"><a href="admin-categories.html" class="admin-nav-link "><i class="bi bi-diagram-3"></i>Categories Tree</a></li>
+      <li class="admin-nav-item"><a href="admin-brands.html" class="admin-nav-link "><i class="bi bi-award"></i>Brands</a></li>
+      <li class="admin-nav-item"><a href="admin-attributes.html" class="admin-nav-link "><i class="bi bi-tags"></i>Attributes</a></li>
+
+      <li class="menu-category-label">Orders & Operations</li>
+      <li class="admin-nav-item"><a href="admin-orders.html" class="admin-nav-link active"><i class="bi bi-cart-check"></i>All Orders</a></li>
+      <li class="admin-nav-item"><a href="admin-order-create.html" class="admin-nav-link "><i class="bi bi-bag-plus"></i>Create Order & Voucher</a></li>
+      <li class="admin-nav-item"><a href="admin-incomplete-orders.html" class="admin-nav-link "><i class="bi bi-cart-x"></i>Incomplete Orders</a></li>
+      <li class="admin-nav-item"><a href="admin-return-orders.html" class="admin-nav-link "><i class="bi bi-arrow-return-left"></i>Return Orders</a></li>
+      <li class="admin-nav-item"><a href="admin-shipments.html" class="admin-nav-link "><i class="bi bi-truck"></i>Shipments & Couriers</a></li>
+
+      <li class="menu-category-label">User Management</li>
+      <li class="admin-nav-item"><a href="admin-customers.html" class="admin-nav-link "><i class="bi bi-people"></i>Customers</a></li>
+      <li class="admin-nav-item"><a href="admin-sellers.html" class="admin-nav-link "><i class="bi bi-shop"></i>Sellers</a></li>
+      <li class="admin-nav-item"><a href="admin-resellers.html" class="admin-nav-link "><i class="bi bi-graph-up-arrow"></i>Resellers</a></li>
+      <li class="admin-nav-item"><a href="admin-wholesalers.html" class="admin-nav-link "><i class="bi bi-box-seam"></i>Wholesalers</a></li>
+      <li class="admin-nav-item"><a href="admin-workers.html" class="admin-nav-link "><i class="bi bi-person-badge"></i>Workers & Staff</a></li>
+      <li class="admin-nav-item"><a href="admin-roles.html" class="admin-nav-link "><i class="bi bi-shield-check"></i>Roles & Permissions</a></li>
+
+      <li class="menu-category-label">Finance & Accounts</li>
+      <li class="admin-nav-item"><a href="admin-payments.html" class="admin-nav-link "><i class="bi bi-cash-coin"></i>Payments Verification</a></li>
+      <li class="admin-nav-item"><a href="admin-commission.html" class="admin-nav-link "><i class="bi bi-percent"></i>Reseller Commission</a></li>
+      <li class="admin-nav-item"><a href="admin-payouts.html" class="admin-nav-link "><i class="bi bi-wallet2"></i>Payout Requests (3% Fee)</a></li>
+      <li class="admin-nav-item"><a href="admin-buying.html" class="admin-nav-link "><i class="bi bi-cart-plus"></i>Buying / Procurement</a></li>
+      <li class="admin-nav-item"><a href="admin-invest.html" class="admin-nav-link "><i class="bi bi-piggy-bank"></i>Investments</a></li>
+      <li class="admin-nav-item"><a href="admin-costs.html" class="admin-nav-link "><i class="bi bi-receipt"></i>Operational Costs</a></li>
+
+      <li class="menu-category-label">Marketing & CMS</li>
+      <li class="admin-nav-item"><a href="admin-banners.html" class="admin-nav-link "><i class="bi bi-image"></i>Banners & Sliders</a></li>
+      <li class="admin-nav-item"><a href="admin-offers.html" class="admin-nav-link "><i class="bi bi-gift"></i>Offers & Flash Sales</a></li>
+      <li class="admin-nav-item"><a href="admin-landing-pages.html" class="admin-nav-link "><i class="bi bi-layout-text-window-reverse"></i>Landing Pages</a></li>
+      <li class="admin-nav-item"><a href="admin-reviews.html" class="admin-nav-link "><i class="bi bi-star"></i>Reviews</a></li>
+      <li class="admin-nav-item"><a href="admin-markets.html" class="admin-nav-link "><i class="bi bi-globe"></i>Market Links</a></li>
+
+      <li class="menu-category-label">System & Reports</li>
+      <li class="admin-nav-item"><a href="admin-reports.html" class="admin-nav-link "><i class="bi bi-bar-chart-line"></i>Reports & Analytics</a></li>
+      <li class="admin-nav-item"><a href="admin-visitors.html" class="admin-nav-link "><i class="bi bi-eye"></i>Live Visitors</a></li>
+      <li class="admin-nav-item"><a href="admin-notifications.html" class="admin-nav-link "><i class="bi bi-bell"></i>Notifications</a></li>
+      <li class="admin-nav-item"><a href="admin-settings.html" class="admin-nav-link "><i class="bi bi-gear"></i>Site Settings</a></li>
+      <li class="admin-nav-item"><a href="admin-audit-log.html" class="admin-nav-link "><i class="bi bi-journal-text"></i>Audit Logs</a></li>
+    </ul>
+  </aside>
+
+        <div class="admin-wrapper">
+          
+  <!-- Admin Topbar -->
+  <header class="admin-topbar">
+    <div class="d-flex align-items-center gap-3">
+      <button class="btn btn-outline-secondary btn-sm d-lg-none" id="adminSidebarToggle">
+        <i class="bi bi-list fs-5"></i>
+      </button>
+      <div class="fw-semibold text-light fs-5">Order Details</div>
+    </div>
+
+    <div class="d-flex align-items-center gap-3">
+      <button class="btn btn-outline-secondary btn-sm rounded-circle" id="adminThemeToggle" title="Toggle Theme">
+        <i class="bi bi-moon-stars-fill"></i>
+      </button>
+
+      <a href="admin-notifications.html" class="position-relative text-light text-decoration-none">
+        <i class="bi bi-bell fs-5"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:10px;">5</span>
+      </a>
+
+      <div class="dropdown">
+        <button class="btn btn-sm btn-outline-secondary dropdown-toggle d-flex align-items-center gap-2 rounded-pill px-3" data-bs-toggle="dropdown">
+          <div class="navbar-brand-logo" style="width:24px;height:24px;font-size:11px;">JA</div>
+          <span class="small fw-semibold text-light">Jainal Abedin</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow-lg border-secondary bg-card">
+          <li><h6 class="dropdown-header text-muted">Super Admin</h6></li>
+          <li><a class="dropdown-item" href="admin-settings.html"><i class="bi bi-gear me-2"></i>Settings</a></li>
+          <li><a class="dropdown-item" href="index.html" target="_blank"><i class="bi bi-shop me-2"></i>View Shop</a></li>
+          <li><hr class="dropdown-divider border-secondary"></li>
+          <li><a class="dropdown-item text-danger" href="javascript:void(0)" onclick="api.logout(); window.location.href='admin-login.html';"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+          <main class="admin-content">
+            <!-- Filter Pills / Counters -->
+            <div class="filter-counter-bar">
+              <div class="filter-pill active">All Records <span class="badge">128</span></div>
+              <div class="filter-pill">Active / Verified <span class="badge">104</span></div>
+              <div class="filter-pill">Pending Review <span class="badge">16</span></div>
+              <div class="filter-pill">Flagged / Archived <span class="badge">8</span></div>
+            </div>
+
+            <!-- Bulk Action Bar -->
+            <div class="p-2 mb-3 bg-primary bg-opacity-10 border border-primary rounded-3 d-flex align-items-center justify-content-between" id="bulkActionBar" style="display:none !important;">
+              <span class="small fw-semibold text-primary"><span id="selectedCountBadge">0</span> records selected</span>
+              <div class="d-flex gap-2">
+                <button class="btn btn-sm btn-success rounded-pill px-3" onclick="showToast('Bulk update applied', 'success')">Bulk Activate</button>
+                <button class="btn btn-sm btn-danger rounded-pill px-3" onclick="showToast('Bulk delete applied', 'info')">Bulk Delete</button>
+              </div>
+            </div>
+
+            <div class="admin-card-table p-4">
+              <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                <div>
+                  <h6 class="fw-bold mb-0">Order Details</h6>
+                  <small class="text-muted">detailed order view and invoice</small>
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-outline-secondary btn-sm rounded-pill" onclick="exportTableToCSV('admin-order-details.html.csv', 'dataTableEl')"><i class="bi bi-file-earmark-spreadsheet me-1"></i>Export CSV</button>
+                  <button class="btn btn-primary btn-sm rounded-pill" onclick="showToast('New entry modal opened', 'info')"><i class="bi bi-plus-lg me-1"></i>New Entry</button>
+                </div>
+              </div>
+
+              <div class="table-responsive">
+                <table class="admin-table" id="dataTableEl">
+                  <thead>
+                    <tr>
+                      <th style="width: 40px;"><input type="checkbox" id="selectAllCheckbox" class="form-check-input"></th>
+                      <th>Reference ID</th>
+                      <th>Title / Name</th>
+                      <th>Category / Role</th>
+                      <th>Amount / Value</th>
+                      <th>Status</th>
+                      <th>Timestamp</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="checkbox" class="form-check-input row-checkbox"></td>
+                      <td class="text-primary fw-bold">REF-849201</td>
+                      <td>Primary Executive Entry</td>
+                      <td>Standard System</td>
+                      <td>৳ 4,850</td>
+                      <td><span class="badge bg-success">Active</span></td>
+                      <td class="small text-muted">28 Sep 2026</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary py-0 px-2" onclick="showToast('Details loaded', 'info')">Edit</button>
+                        <button class="btn btn-sm btn-outline-danger py-0 px-2" onclick="showToast('Record deleted', 'warning')">Delete</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" class="form-check-input row-checkbox"></td>
+                      <td class="text-primary fw-bold">REF-849202</td>
+                      <td>Secondary Commercial Unit</td>
+                      <td>Commercial System</td>
+                      <td>৳ 12,400</td>
+                      <td><span class="badge bg-warning text-dark">Pending</span></td>
+                      <td class="small text-muted">27 Sep 2026</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary py-0 px-2">Edit</button>
+                        <button class="btn btn-sm btn-outline-danger py-0 px-2">Delete</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </main>
+        </div>
+        
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/admin.js"></script>
+  
+</body>
+</html>

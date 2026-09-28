@@ -1,0 +1,11 @@
+name = "dream-cart-bd"
+main = "worker/index.js"
+compatibility_date = "2024-04-01"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+[vars]
+GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz_SAMPLE_DEPLOYMENT_ID/exec"
+GOOGLE_API_SECRET = "dc_secure_cloudflare_secret_token"

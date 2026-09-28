@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="bn" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>রিসেলার রেজিস্ট্রেশন | Dream Cart BD - You Make.</title>
+  <meta name="description" content="ড্রিম কার্ট বিডি - প্রিমিয়াম ই-কমার্স প্ল্যাটফর্ম। অফিস ইকুইপমেন্ট, গ্যাজেটস ও জেনারেল প্রডাক্টস।">
+  <link rel="icon" href="https://tinyurl.com/Dream-Cart-BD" type="image/x-icon">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Google Fonts Hind Siliguri -->
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Swiper.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div id="global-loader">
+    <div class="loader-logo">DC</div>
+    <div class="loader-progress"></div>
+    <div class="text-muted small mt-3">লোড হচ্ছে... ড্রিম কার্ট বিডি</div>
+  </div>
+
+  <!-- Top Announcement -->
+  <div class="top-announcement">
+    <span><i class="bi bi-gift-fill me-2"></i>২০০০ টাকার বেশি অর্ডারে ফ্রি ডেলিভারি! বিকাশ/নগদে ৫% তাৎক্ষণিক ক্যাশব্যাক ছাড়। হটলাইন: 01581703822</span>
+  </div>
+
+  <!-- Main Navigation -->
+  <header class="app-header">
+    <div class="container-homepage">
+      <nav class="navbar navbar-expand-lg py-2">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <div class="navbar-brand-logo">DC</div>
+          <div class="navbar-brand-text">Dream Cart <span>BD</span></div>
+        </a>
+
+        <div class="header-search-wrap mx-lg-4 my-2 my-lg-0 order-3 order-lg-2">
+          <input type="text" class="header-search-input" placeholder="পণ্য, ক্যাটাগরি বা ব্র্যান্ড খুঁজুন...">
+          <button class="header-search-btn" title="অনুসন্ধান"><i class="bi bi-search"></i></button>
+        </div>
+
+        <div class="d-flex align-items-center order-2 order-lg-3 ms-auto gap-2">
+          <button class="btn btn-outline-secondary btn-sm theme-toggle-btn rounded-circle p-2" title="থিম পরিবর্তন">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+          
+          <a href="cart.html" class="btn btn-outline-primary btn-sm position-relative d-flex align-items-center gap-1 rounded-pill px-3">
+            <i class="bi bi-cart3"></i>
+            <span class="d-none d-md-inline">কার্ট</span>
+            <span class="cart-count-badge badge bg-danger rounded-pill" style="display:none;">0</span>
+          </a>
+
+          <div class="dropdown">
+            <button class="btn btn-primary btn-sm dropdown-toggle rounded-pill px-3" data-bs-toggle="dropdown">
+              <i class="bi bi-person-circle me-1"></i>লগইন / পোর্টাল
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-lg border-secondary bg-card">
+              <li><h6 class="dropdown-header text-muted">লগইন করুন</h6></li>
+              <li><a class="dropdown-item" href="customer-login.html"><i class="bi bi-person me-2 text-info"></i>কাস্টমার লগইন</a></li>
+              <li><a class="dropdown-item" href="seller-login.html"><i class="bi bi-shop me-2 text-warning"></i>সেলার পোর্টাল</a></li>
+              <li><a class="dropdown-item" href="reseller-login.html"><i class="bi bi-graph-up-arrow me-2 text-success"></i>রিসেলার পোর্টাল</a></li>
+              <li><a class="dropdown-item" href="wholesaler-login.html"><i class="bi bi-boxes me-2 text-primary"></i>পাইকারি (হোলসেল)</a></li>
+              <li><hr class="dropdown-divider border-secondary"></li>
+              <li><a class="dropdown-item" href="admin-login.html"><i class="bi bi-shield-lock me-2 text-danger"></i>এডমিন প্যানেল</a></li>
+            </ul>
+          </div>
+
+          <button class="navbar-toggler border-secondary ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse order-4 order-lg-2" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="index.html">হোম</a></li>
+            <li class="nav-item"><a class="nav-link" href="products.html">সকল পণ্য</a></li>
+            <li class="nav-item"><a class="nav-link" href="categories.html">ক্যাটাগরি</a></li>
+            <li class="nav-item"><a class="nav-link" href="offers.html">অফারসমূহ</a></li>
+            <li class="nav-item"><a class="nav-link" href="markets.html">অন্যান্য মার্কেট</a></li>
+            <li class="nav-item"><a class="nav-link" href="tracking.html">ট্র্যাকিং</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">যোগাযোগ</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-grow-1 py-5">
+    <div class="container-homepage">
+      <div class="card bg-card border-secondary p-4 p-md-5 rounded-4 shadow-lg max-w-700 mx-auto">
+        <div class="text-center mb-4">
+          <span class="badge bg-success text-white rounded-pill px-3 py-2 mb-2">রিসেলার রেজিস্ট্রেশন</span>
+          <h3 class="fw-bold">নতুন রিসেলার অ্যাকাউন্ট</h3>
+          <p class="text-muted small">সঠিক তথ্য দিয়ে ফরম পূরণ করুন</p>
+        </div>
+        <form onsubmit="handleAuthRegister(event, 'reseller')">
+          <div class="row">
+            
+          <div class="col-md-6 mb-3">
+            <label class="form-label small text-muted">আপনার নাম <span class="text-danger">*</span></label>
+            <input type="text" class="form-control bg-secondary text-light border-secondary" required placeholder="পুরো নাম">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label small text-muted">মোবাইল নম্বর <span class="text-danger">*</span></label>
+            <input type="tel" class="form-control bg-secondary text-light border-secondary" required placeholder="০১৮XXXXXXXX">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label small text-muted">পেমেন্ট মেথড (উইথড্রর জন্য)</label>
+            <select class="form-select bg-secondary text-light border-secondary">
+              <option>বিকাশ (পার্সোনাল)</option>
+              <option>নগদ (পার্সোনাল)</option>
+              <option>রকেট</option>
+              <option>ব্যাংক একাউন্ট</option>
+            </select>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label small text-muted">উইথড্র নম্বর / ব্যাংক হিসাব</label>
+            <input type="text" class="form-control bg-secondary text-light border-secondary" required placeholder="নম্বর বা একাউন্ট">
+          </div>
+        
+            <div class="col-md-6 mb-3">
+              <label class="form-label small text-muted">পাসওয়ার্ড</label>
+              <input type="password" id="regPass" class="form-control bg-secondary text-light border-secondary" required placeholder="কমপক্ষে ৬ ডিজিট">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label class="form-label small text-muted">কনফার্ম পাসওয়ার্ড</label>
+              <input type="password" id="regPassConf" class="form-control bg-secondary text-light border-secondary" required placeholder="পুনরায় লিখুন">
+            </div>
+            <div class="col-12 mb-3">
+              <label class="form-label small text-muted">ক্যাপচা যাচাই: <strong class="text-warning">৫ + ৯ = কত?</strong></label>
+              <input type="number" id="regCaptcha" class="form-control bg-secondary text-light border-secondary" required placeholder="উত্তর দিন">
+            </div>
+            <div class="col-12 mb-4">
+              <div class="form-check small">
+                <input class="form-check-input" type="checkbox" required id="regTerms">
+                <label class="form-check-label text-muted" for="regTerms">
+                  আমি ড্রিম কার্ট বিডি-র <a href="terms.html" class="text-primary text-decoration-none">শর্তাবলী</a> ও <a href="privacy.html" class="text-primary text-decoration-none">প্রাইভেসি পলিসি</a> মেনে নিচ্ছি।
+                </label>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 rounded-pill fw-bold py-2 mb-3">রেজিস্ট্রেশন সম্পন্ন করুন</button>
+          <div class="text-center small text-muted">
+            পূর্বেই অ্যাকাউন্ট আছে? <a href="reseller-login.html" class="text-primary text-decoration-none fw-bold">লগইন করুন</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Floating Actions (Right Side Desktop & Mobile) -->
+  <div class="floating-actions-desktop">
+    <a href="cart.html" class="floating-btn floating-btn-cart" title="আপনার কার্ট">
+      <i class="bi bi-cart3"></i>
+      <span class="floating-cart-badge cart-count-badge" style="display:none;">0</span>
+    </a>
+    <a href="https://wa.me/8801581703822" target="_blank" class="floating-btn floating-btn-whatsapp" title="হোয়াটসঅ্যাপে যোগাযোগ">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+    <a href="#" class="floating-btn floating-btn-call btn-open-call-modal" title="সরাসরি কল করুন">
+      <i class="bi bi-telephone-fill"></i>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <div class="container-homepage">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-logo">
+            <div class="navbar-brand-logo">DC</div>
+            <div>
+              <h5 class="fw-bold mb-0 text-primary">Dream Cart BD</h5>
+              <small class="text-muted">You Make.</small>
+            </div>
+          </div>
+          <p class="text-secondary small mb-3">
+            ড্রিম কার্ট বিডি একটি আধুনিক ও বিশ্বস্ত ই-কমার্স প্ল্যাটফর্ম। অফিস ইকুইপমেন্ট, ডিজিটাল গ্যাজেটস, ইলেকট্রনিক্স এবং জেনারেল কনজিউমার পণ্যের পাইকারি, রিটেইল ও রিসেলিং সমাধান।
+          </p>
+          <div class="text-secondary small">
+            <p class="mb-1"><i class="bi bi-geo-alt-fill text-danger me-2"></i>চৌধুরী প্লাজা, নিচতলা, রুম নং-০৩, পদুয়ার বাজার বিশ্বরোড, সদর দক্ষিণ, কুমিল্লা, বাংলাদেশ।</p>
+            <p class="mb-1"><i class="bi bi-telephone-fill text-success me-2"></i>01581703822, 01818273838</p>
+            <p class="mb-1"><i class="bi bi-envelope-fill text-info me-2"></i>jainal.dcitbd@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-6">
+          <h6 class="footer-title">কুইক লিংকস</h6>
+          <ul class="footer-links">
+            <li><a href="index.html">হোমপেজ</a></li>
+            <li><a href="products.html">সকল প্রোডাক্ট</a></li>
+            <li><a href="categories.html">ক্যাটাগরি সমূহ</a></li>
+            <li><a href="offers.html">স্পেশাল অফার</a></li>
+            <li><a href="tracking.html">অর্ডার ট্র্যাকিং</a></li>
+            <li><a href="markets.html">অন্যান্য মার্কেট</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-6">
+          <h6 class="footer-title">পলিসি ও শর্ত</h6>
+          <ul class="footer-links">
+            <li><a href="terms.html">ব্যবহারের শর্তাবলী</a></li>
+            <li><a href="privacy.html">প্রাইভেসি পলিসি</a></li>
+            <li><a href="terms.html#returns">রিটার্ন ও রিফান্ড</a></li>
+            <li><a href="terms.html#delivery">ডেলিভারি তথ্য</a></li>
+            <li><a href="contact.html">সাপোর্ট সেন্টার</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h6 class="footer-title">উদ্যোক্তা ও রিসেলার হাব</h6>
+          <p class="text-secondary small">
+            বিনা পুঁজিতে আমাদের সাথে ঘরে বসে প্রোডাক্ট রিসেলিং শুরু করুন এবং প্রতি অর্ডারে আকর্ষণীয় কমিশন আয় করুন।
+          </p>
+          <div class="d-flex gap-2 flex-wrap mb-3">
+            <a href="reseller-register.html" class="btn btn-sm btn-outline-success rounded-pill px-3">রিসেলার হোন</a>
+            <a href="wholesaler-register.html" class="btn btn-sm btn-outline-warning rounded-pill px-3">পাইকারি ক্রয়</a>
+            <a href="seller-register.html" class="btn btn-sm btn-outline-info rounded-pill px-3">সেলার রেজিস্ট্রেশন</a>
+          </div>
+
+          <!-- Developer Credits -->
+          <div class="developer-credit-box">
+            <div class="d-flex align-items-center gap-2 mb-1">
+              <i class="bi bi-code-slash text-primary fs-5"></i>
+              <strong class="small text-white">কারিগরি সহযোগিতায়: জৈনল আবেদীন</strong>
+            </div>
+            <div class="small text-muted mb-2">সিইও, ড্রিম ক্যারিয়ার আইটি বিডি (Dream Career IT BD)</div>
+            <div class="d-flex gap-2">
+              <a href="https://dcitbd.github.io/Jainal-Abedin/" target="_blank" class="badge bg-secondary text-decoration-none">ডেভেলপার প্রোফাইল</a>
+              <a href="https://dcitbd.github.io/dcitbd/" target="_blank" class="badge bg-primary text-decoration-none">কোম্পানি ওয়েবসাইট</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-secondary my-4">
+
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-muted">
+        <div>&copy; 2026 Dream Cart BD. সর্বস্বত্ব সংরক্ষিত। Slogan: "You Make."</div>
+        <div class="mt-2 mt-md-0">
+          <span class="me-3">নিরাপদ পেমেন্ট: বিকাশ | নগদ | রকেট | ব্যাংক</span>
+          <a href="admin-login.html" class="text-muted text-decoration-none"><i class="bi bi-lock-fill"></i> এডমিন</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/app.js"></script>
+  
+<script>
+function handleAuthRegister(e, role) {
+  e.preventDefault();
+  if (parseInt(document.getElementById("regCaptcha").value) !== 14) {
+    showToast("ভুল ক্যাপচা! আবার চেষ্টা করুন।", "error");
+    return;
+  }
+  if (document.getElementById("regPass").value !== document.getElementById("regPassConf").value) {
+    showToast("পাসওয়ার্ড দুটি মেলেনি!", "error");
+    return;
+  }
+  showToast("রেজিস্ট্রেশন সফল! ওটিপি ভেরিফিকেশনে পাঠানো হচ্ছে...", "success");
+  setTimeout(() => {
+    window.location.href = "reseller-otp.html";
+  }, 800);
+}
+</script>
+
+</body>
+</html>
