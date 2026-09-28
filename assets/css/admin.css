@@ -1,0 +1,282 @@
+/* DREAM CART BD - Official Admin & Management Stylesheet */
+:root {
+  --admin-sidebar-w: 260px;
+  --admin-topbar-h: 64px;
+  --admin-bg: #090d16;
+  --admin-card: #111827;
+  --admin-card-hover: #172033;
+  --admin-border: #1e293b;
+  --admin-primary: #0ea5e9;
+  --admin-primary-dark: #0284c7;
+  --admin-text: #f8fafc;
+  --admin-muted: #94a3b8;
+  --admin-success: #10b981;
+  --admin-warning: #f59e0b;
+  --admin-danger: #ef4444;
+  --admin-purple: #8b5cf6;
+}
+
+[data-theme="light"] {
+  --admin-bg: #f1f5f9;
+  --admin-card: #ffffff;
+  --admin-card-hover: #f8fafc;
+  --admin-border: #e2e8f0;
+  --admin-primary: #0284c7;
+  --admin-text: #0f172a;
+  --admin-muted: #64748b;
+}
+
+body.admin-body {
+  background-color: var(--admin-bg);
+  color: var(--admin-text);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Sidebar */
+.admin-sidebar {
+  width: var(--admin-sidebar-w);
+  background: var(--admin-card);
+  border-right: 1px solid var(--admin-border);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+}
+.admin-sidebar-header {
+  height: var(--admin-topbar-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+  border-bottom: 1px solid var(--admin-border);
+}
+.admin-sidebar-menu {
+  list-style: none;
+  padding: 12px 10px;
+  margin: 0;
+}
+.menu-category-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--admin-muted);
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 10px 12px 4px;
+}
+.admin-nav-item {
+  margin-bottom: 3px;
+}
+.admin-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 14px;
+  border-radius: 8px;
+  color: var(--admin-muted);
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.admin-nav-link:hover, .admin-nav-link.active {
+  background: rgba(14, 165, 233, 0.12);
+  color: var(--admin-primary);
+}
+.admin-nav-link i {
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+}
+.admin-badge-count {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 10px;
+  background: var(--admin-border);
+  color: var(--admin-text);
+}
+
+/* Main Content Area */
+.admin-wrapper {
+  margin-left: var(--admin-sidebar-w);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: margin-left 0.3s ease;
+}
+.admin-topbar {
+  height: var(--admin-topbar-h);
+  background: var(--admin-card);
+  border-bottom: 1px solid var(--admin-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+.admin-content {
+  padding: 24px;
+  flex-grow: 1;
+}
+
+/* Stat Cards */
+.stat-card {
+  background: var(--admin-card);
+  border: 1px solid var(--admin-border);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+.stat-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--admin-primary);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}
+.stat-icon-wrap {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #fff;
+  flex-shrink: 0;
+}
+.stat-val {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--admin-text);
+  line-height: 1.2;
+}
+.stat-title {
+  font-size: 13px;
+  color: var(--admin-muted);
+  font-weight: 500;
+}
+
+/* Filter Counter Pills */
+.filter-counter-bar {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+.filter-pill {
+  background: var(--admin-card);
+  border: 1px solid var(--admin-border);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  color: var(--admin-muted);
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+.filter-pill:hover, .filter-pill.active {
+  background: var(--admin-primary);
+  border-color: var(--admin-primary);
+  color: #fff;
+}
+.filter-pill .badge {
+  background: rgba(255, 255, 255, 0.2);
+  color: inherit;
+  font-size: 11px;
+}
+
+/* Data Table Components */
+.admin-card-table {
+  background: var(--admin-card);
+  border: 1px solid var(--admin-border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.table-responsive {
+  margin: 0;
+}
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  color: var(--admin-text);
+}
+.admin-table th {
+  background: rgba(14, 165, 233, 0.05);
+  border-bottom: 1px solid var(--admin-border);
+  padding: 12px 14px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--admin-muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.admin-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--admin-border);
+  font-size: 13px;
+  vertical-align: middle;
+}
+.admin-table tbody tr:hover {
+  background: var(--admin-card-hover);
+}
+
+/* Printable Voucher Styles (A5) */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .printable-voucher, .printable-voucher * {
+    visibility: visible;
+  }
+  .printable-voucher {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 15mm;
+    background: #fff !important;
+    color: #000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Mobile Admin Nav */
+@media (max-width: 992px) {
+  .admin-sidebar {
+    transform: translateX(-100%);
+  }
+  .admin-sidebar.show {
+    transform: translateX(0);
+  }
+  .admin-wrapper {
+    margin-left: 0;
+  }
+}
